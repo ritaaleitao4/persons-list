@@ -19,8 +19,3 @@ npm run start
 ```
 npm run build
 ```
-
-### Tests
-```
-npm test
-```
