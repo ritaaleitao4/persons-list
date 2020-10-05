@@ -129,10 +129,9 @@ const Home = () => {
 
     try {
       await axios.delete(`${process.env.REACT_APP_API_URL}/${id}?api_token=${process.env.REACT_APP_API_TOKEN}`).then(() => {
-        const clonePersons = state.persons;
+        const clonePersons = state.persons
         const indexDeletedElm = state.persons.indexOf(state.persons.find((item) => item.id === id));
         clonePersons.splice(indexDeletedElm, 1);
-        setSearchValue('');
         setState({
           ...state,
           persons: clonePersons,
